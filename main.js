@@ -17,6 +17,18 @@ function CounterViewModel() {
             self.count(currentValue - 1);
         }
     }; 
+
+    self.dogStatus = ko.computed(function(){
+        if(self.count() === 0){
+            return "DISSAPOINTED";
+        }
+        else if(self.count() <= 5 || self.count > 0){
+            return "Observing";
+        }
+        else if(self.count() >= 5){
+            return "THRILLED";
+        }
+    });
 };
 
 // get knockout initialized on a page - unless components are entering and leaving the page
