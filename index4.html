@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link rel="stylesheet" href="style3.css">
+        <script type='text/javascript' src="bower_components\knockout\dist\knockout.js"></script>
+        <script type='text/javascript' src="bower_components\knockout-validation\dist\knockout.validation.js"></script>
+        <title>JS knockout-app  </title>
+    </head>
+    <div id="knockout-app" class="card">
+        <h2>Items</h2>
+        <ul data-bind="foreach: items">
+           <li data-bind="text: $data"></li>
+        </ul>   
+        
+        <loading-button params="buttonText: 'Get All Items', 'action': fetchItems, 'onDone':onNewItems "></loading-button>
+     
+        
+        
+     </div>
+     </div>
+    <body>
+        <script src="main4.js"></script>
+    </body>
+</html>
